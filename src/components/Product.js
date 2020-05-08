@@ -5,7 +5,7 @@ export default class ProductAdmin extends Component {
 
   state = {
     isEditMode: false,
-    updatedproductname: this.props.name
+    updatedproductc: this.props.cantidad
   }
 
   handleProductEdit = event => {
@@ -16,10 +16,10 @@ export default class ProductAdmin extends Component {
   handleEditSave = event => {
     event.preventDefault();
     this.setState({ isEditMode: false });
-    this.props.handleUpdateProduct(this.props.id, this.state.updatedproductname);
+    this.props.handleUpdateProduct(this.props.id, this.state.updatedproductc);
   }
 
-  onAddProductNameChange = event => this.setState({ "updatedproductname": event.target.value });
+  onAddProductNameChange = event => this.setState({ "updatedproductc": event.target.value });
 
   render() {
     return (
@@ -41,7 +41,7 @@ export default class ProductAdmin extends Component {
                 className="input is-medium"
                 type="text" 
                 placeholder="Enter name"
-                value={this.state.updatedproductname}
+                value={this.state.updatedproductc}
                 onChange={this.onAddProductNameChange}
               />
               <p className="product-id">id: { this.props.id }</p>
@@ -51,7 +51,7 @@ export default class ProductAdmin extends Component {
               >save</button>
             </div>
           : <div>
-              <p className="product-title">{ this.props.name }</p>
+              <p className="product-title">{ this.props.cantidad }</p>
               <p className="product-id">id: { this.props.id }</p>
             </div>
         }

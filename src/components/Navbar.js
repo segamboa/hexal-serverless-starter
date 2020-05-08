@@ -6,20 +6,20 @@ export default class Navbar extends Component {
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <a className="navbar-item" href="/">
-            <img src="hexal-logo.png" width="112" height="28" alt="hexal logo" />
+            
           </a>
         </div>
 
         <div id="navbarBasicExample" className="navbar-menu">
           <div className="navbar-start">
             <a href="/" className="navbar-item">
-              Home
+              Inicio
             </a>
-            <a href="/products" className="navbar-item">
-              Products
+            <a href="/productos" className="navbar-item">
+              Productos
             </a>
             <a href="/admin" className="navbar-item">
-              Admin
+              Agregar productos
             </a>
           </div>
 
