@@ -21,7 +21,7 @@ try{
     "id_producto": id,
     "cantidad": this.state.newproduct.cantidad
   };
-  await axios.post(`${config.api.invokeUrl}/productos/${id}`, params);
+  await axios.post(`${config.api.invokeUrl}/productos/`, params);
   this.setState({ products: [...this.state.products, this.state.newproduct] });
   this.setState({ newproduct: { "cantidad": 0, "id_producto":""}});
 
@@ -124,7 +124,7 @@ try{
                           isAdmin={true}
                           handleUpdateProduct={this.handleUpdateProduct}
                           handleDeleteProduct={this.handleDeleteProduct} 
-                          name={product.productname} 
+                          namecantidad={product.cantidad} 
                           id={product.id}
                           key={product.id}
                         />)
